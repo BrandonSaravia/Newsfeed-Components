@@ -8,9 +8,21 @@ const toggleMenu = () => {
 const menu = document.querySelector('.menu');
 
 // create a reference to the ".menu-button" class
-const menuButton = document.querySelector('.menu-button');
+// const menuButton = document.querySelector('.menu-button');
+
+$(function(){
+
+var menuButton = $('.menu-button');
+menuButton.on('click', toggleMenu);
+
+$('.articles').sortable();
+
+});
+
 
 // Using your menuButton reference, add a click handler that calls toggleMenu
-menuButton.addEventListener('click', toggleMenu);
+//menuButton.addEventListener('click', toggleMenu);
+
+
 
 
